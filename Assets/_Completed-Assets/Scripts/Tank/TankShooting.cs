@@ -9,10 +9,10 @@ namespace Complete
     {
 
         [DllImport("__Internal")]
-        private static extern void Hello();
+        public static extern void Hello();
 
         [DllImport("__Internal")]
-        private static extern void HelloString(string str);
+        public static extern void HelloString(string str);
 
         public int m_PlayerNumber = 1;              // Used to identify the different players.
         public Rigidbody m_Shell;                   // Prefab of the shell.
@@ -90,7 +90,7 @@ namespace Complete
         }
 
 
-        private void Fire ()
+        public  void Fire ()
         {
             // Set the fired flag so only Fire is only called once.
             m_Fired = true;
