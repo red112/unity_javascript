@@ -8,6 +8,10 @@ mergeInto(LibraryManager.library, {
     window.alert(UTF8ToString(str));
   },
 
+  CallBrowser: function (str) {
+    window.HelloBrowser(UTF8ToString(str));
+  },
+
   PrintFloatArray: function (array, size) {
     for(var i = 0; i < size; i++)
     console.log(HEAPF32[(array >> 2) + i]);

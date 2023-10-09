@@ -14,6 +14,11 @@ namespace Complete
         [DllImport("__Internal")]
         public static extern void HelloString(string str);
 
+        [DllImport("__Internal")]
+        public static extern void CallBrowser(string str);
+
+
+
         public int m_PlayerNumber = 1;              // Used to identify the different players.
         public Rigidbody m_Shell;                   // Prefab of the shell.
         public Transform m_FireTransform;           // A child of the tank where the shells are spawned.
@@ -109,7 +114,8 @@ namespace Complete
             // Reset the launch force.  This is a precaution in case of missing button events.
             m_CurrentLaunchForce = m_MinLaunchForce;
 
-            HelloString("Pang");
+            //HelloString("Pang");
+            CallBrowser("I'm C# script from Unity!");
         }
     }
 }

@@ -13,6 +13,9 @@
       <button onclick="
         UnityPlayerInstance.SendMessage('CompleteTank','Fire');
       ">Fire</button>
+      <button onclick="
+        window.HelloBrowser('Call from Browser');
+      ">Call</button>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -27,6 +30,10 @@
       </div>
     </div>
     <script>
+
+      window.HelloBrowser = function(caller) {
+        alert(caller);
+      }
 
       var UnityPlayerInstance;
 
